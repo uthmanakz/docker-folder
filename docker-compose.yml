@@ -17,7 +17,7 @@ services:
    ports:
     - "9090:9090"
    volumes:
-    - "$HOME/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+    - "/home/ec2-user/prometheus/:/etc/prometheus/"
 
 
   
