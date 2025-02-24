@@ -11,5 +11,13 @@ services:
       - '/:/host:ro,rslave'
   
 
+  prometheus: 
+   image: prom/prometheus
+   container_name: prometheus
+   ports:
+    - "9090:9090"
+   volumes:
+    - "$HOME/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+
 
   
