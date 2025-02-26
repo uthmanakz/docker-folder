@@ -26,4 +26,14 @@ services:
     - "3000:3000"
 
 
+ 
+  nginx-prometheus-exporter:
+    image: nginx/nginx-prometheus-exporter:1.4.0
+    ports:
+      - "9113:9113"
+    command:
+      - "--nginx.scrape-uri=http://$NGINX:80/stub_status"
+
+
+
   
